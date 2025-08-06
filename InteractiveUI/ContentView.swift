@@ -10,12 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("What's your name?")
+            Text("Enter you name:")
                 .font(.title)
-            Text("Enter Name")
+                .foregroundColor(Color.blue)
+            TextField("Type your name here...", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                .multilineTextAlignment(.center)
+                .font(.title)
+                .border(.gray,width: 1)
+                .padding()
             Button("Submit") {
                 
             }
+            .font(.title2)
+            .buttonStyle(.borderedProminent)
+            .tint(.green)
         }
         .padding()
     }
